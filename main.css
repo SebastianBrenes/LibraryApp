@@ -23,6 +23,7 @@ body {
 
     
 #input-container input {
+    font-family: "Amatic SC", sans-serif;
     font-weight: 900;
     font-style: normal;
     font-size: 24px;
@@ -46,13 +47,37 @@ body {
 
 #library-section {
     margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    justify-items: center;
 }
 
-#library-section .ejemplo{
-    height: 200px;
-    width: 300px;
-    background-color: #606c38;
+#library-section .book{
+    height: auto;
+    width: 350px;
+    /* background-color: #606c38; */
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(40,54,24,1) 0%, rgba(96,108,56,1) 100%);
     border-radius: 24px;
+    border: 0px solid ;
+    transition: border 0.2s;
+}
+
+#library-section .book:hover{
+    border: 5px solid #dda15e;
+}
+
+#library-section .book p{
+    margin: 15px;
+    color: white;
+    font-size: 22px;
+    border-bottom: 1px solid;
+    padding-bottom: 15px;
+}
+
+#library-section .book p:last-child {
+    border-bottom: 0;
 }
 
 /* #606c38 */
