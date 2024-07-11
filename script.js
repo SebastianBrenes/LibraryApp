@@ -1,3 +1,4 @@
+
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -11,9 +12,28 @@ function Book(title, author, pages, read) {
     }
 }
 
-function addBookToLibrary() {
-    
-    myLibrary.push(newBook)
+function ClearFields() {
+    document.getElementById("name-book").value = "";
+    document.getElementById("author-name").value = "";
+    document.getElementById("pages").value = "";
+    document.getElementById("read").value = "";
 }
 
-addBookToLibrary();
+function addBookToLibrary() {
+    const title = document.getElementById('name-book').value
+    console.log(title);
+    const author = document.getElementById('author-name').value
+    console.log(author);
+    const pages = document.getElementById('pages').value
+    console.log(pages);
+    const read = document.getElementById('read').value
+    console.log(read);
+    const newBook = new Book(title, author, pages, read)
+    myLibrary.push(newBook)
+    ClearFields();
+}
+
+
+
+let buttonSelector = document.querySelector('#button-add-book')
+buttonSelector.addEventListener('click', addBookToLibrary);

@@ -22,7 +22,7 @@ body {
 }
 
     
-#input-container input {
+#input-container input[type=text] {
     font-family: "Amatic SC", sans-serif;
     font-weight: 900;
     font-style: normal;
