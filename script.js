@@ -12,6 +12,35 @@ function Book(title, author, pages, read) {
     }
 }
 
+function showLibrary() {
+    document.getElementById('library-section').innerHTML = '';
+    for (let index = 0; index < myLibrary.length; index++) {
+        let element = myLibrary[index];
+        let library = document.querySelector('#library-section');
+        let divBook = document.createElement('div'); // creates a new div - book
+        divBook.className = "book"
+        library.appendChild(divBook); // adds the div to the library section
+        // creates text content from the input
+        let nameBook = document.createElement('p');
+        nameBook.className = "name-book"
+        nameBook.textContent = element.title;
+        let authorBook = document.createElement('p');
+        authorBook.className = "name-book"
+        authorBook.textContent = element.author;
+        let pagesBook = document.createElement('p');
+        pagesBook.className = "name-book"
+        pagesBook.textContent = element.pages;
+        let readBook = document.createElement('p');
+        readBook.className = "name-book"
+        readBook.textContent = element.read;
+        // adding to the new div
+        divBook.appendChild(nameBook);
+        divBook.appendChild(authorBook);
+        divBook.appendChild(pagesBook);
+        divBook.appendChild(readBook);
+    }
+}
+
 function ClearFields() {
     document.getElementById("name-book").value = "";
     document.getElementById("author-name").value = "";
@@ -31,9 +60,10 @@ function addBookToLibrary() {
     const newBook = new Book(title, author, pages, read)
     myLibrary.push(newBook)
     ClearFields();
+    showLibrary()
 }
 
 
 
-let buttonSelector = document.querySelector('#button-add-book')
+let buttonSelector = document.querySelector('#button-add-book');
 buttonSelector.addEventListener('click', addBookToLibrary);
