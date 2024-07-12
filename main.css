@@ -80,6 +80,27 @@ body {
     border-bottom: 0;
 }
 
+.book .options {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    gap: 50px;
+    justify-content: center;
+    margin: 10px;
+    
+}
+
+.book .options .button-options {
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    border: none;
+}
+
+.book .options .button-options:hover {
+    cursor: pointer;
+}
+
 /* #606c38 */
 /* #283618 */
 /* #fefae0 */
