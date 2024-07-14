@@ -17,7 +17,11 @@
             <label for="pages">Amount of pages</label>
             <input type="text" id="pages">
             <label for="read">Have you read it?</label>
-            <input type="text" id="read">
+            <label class="switch" for="read">
+                <input type="checkbox" id="read">
+                <span class="slider round"></span>
+                </label>
+            <!-- <input type="text" id="read"> -->
             <button type="button" id="button-add-book">Add Book</button>
         </section>
         <section id="library-section">
@@ -25,15 +29,15 @@
                 <p class="name-book">Las aventuras del magnifico hilojuan y sus magnificos amigos en busca de la felicidad y la busqueda de dios, pero que titulo mas raro pero yo que se no soy cientificoLas aventuras del magnifico hilojuan y sus magnificos amigos en busca de la felicidad y la busqueda de dios, pero que titulo mas raro pero yo que se no soy cientifico</p>
                 <p class="author-name">Juan Alberto Garcia Marques</p>
                 <p class="pages">10 pages</p>
-                <p class="read">I'v read it ✓</p>
+            <p class="read">I'v read it ✓</p>
                 <div class="options">
                     <button class="button-options delete">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#fff"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg>
+                        <svg class="delete" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#fff"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg>
                     </button>
                     <button class="button-options toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff"><path d="M480-72q-69-64-155.22-104T144-216v-384q95 0 179.5 39T480-456q72-66 156.5-105T816-600v384q-95.49 0-181.24 40Q549-136 480-72Zm0-95q59-44 125-75t139-41v-237q-78 14-142.5 59.5T480-358q-57-57-121.5-102.5T216-520v237q73 9 139 40.5T480-167Zm0-385q-70 0-119-49t-49-119q0-70 49-119t119-49q70 0 119 49t49 119q0 70-49 119t-119 49Zm0-72q39.6 0 67.8-28.2Q576-680.4 576-720q0-39.6-28.2-67.8Q519.6-816 480-816q-39.6 0-67.8 28.2Q384-759.6 384-720q0 39.6 28.2 67.8Q440.4-624 480-624Zm0-96Zm0 362Z"/></svg>
+                        <svg class="toggle" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fff"><path d="M480-72q-69-64-155.22-104T144-216v-384q95 0 179.5 39T480-456q72-66 156.5-105T816-600v384q-95.49 0-181.24 40Q549-136 480-72Zm0-95q59-44 125-75t139-41v-237q-78 14-142.5 59.5T480-358q-57-57-121.5-102.5T216-520v237q73 9 139 40.5T480-167Zm0-385q-70 0-119-49t-49-119q0-70 49-119t119-49q70 0 119 49t49 119q0 70-49 119t-119 49Zm0-72q39.6 0 67.8-28.2Q576-680.4 576-720q0-39.6-28.2-67.8Q519.6-816 480-816q-39.6 0-67.8 28.2Q384-759.6 384-720q0 39.6 28.2 67.8Q440.4-624 480-624Zm0-96Zm0 362Z"/></svg>
                     </button>
-                </div>    
+                </div>
             </div>
             <div class="book">
                 <p class="name-book">Las aventuras del magnifico hilojuan y sus magnificos amigos en busca de la felicidad y la busqueda de dios 2</p>
@@ -42,10 +46,10 @@
                 <p class="read">I'v not read it ✗</p>
                 <div class="options">   
                     <button class="button-options delete">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#fefae0"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg>
+                        <svg class="delete" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#fefae0"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg>
                     </button>
                     <button class="button-options toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fefae0"><path d="M480-72q-69-64-155.22-104T144-216v-384q95 0 179.5 39T480-456q72-66 156.5-105T816-600v384q-95.49 0-181.24 40Q549-136 480-72Zm0-95q59-44 125-75t139-41v-237q-78 14-142.5 59.5T480-358q-57-57-121.5-102.5T216-520v237q73 9 139 40.5T480-167Zm0-385q-70 0-119-49t-49-119q0-70 49-119t119-49q70 0 119 49t49 119q0 70-49 119t-119 49Zm0-72q39.6 0 67.8-28.2Q576-680.4 576-720q0-39.6-28.2-67.8Q519.6-816 480-816q-39.6 0-67.8 28.2Q384-759.6 384-720q0 39.6 28.2 67.8Q440.4-624 480-624Zm0-96Zm0 362Z"/></svg>
+                        <svg class="toggle" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#fefae0"><path d="M480-72q-69-64-155.22-104T144-216v-384q95 0 179.5 39T480-456q72-66 156.5-105T816-600v384q-95.49 0-181.24 40Q549-136 480-72Zm0-95q59-44 125-75t139-41v-237q-78 14-142.5 59.5T480-358q-57-57-121.5-102.5T216-520v237q73 9 139 40.5T480-167Zm0-385q-70 0-119-49t-49-119q0-70 49-119t119-49q70 0 119 49t49 119q0 70-49 119t-119 49Zm0-72q39.6 0 67.8-28.2Q576-680.4 576-720q0-39.6-28.2-67.8Q519.6-816 480-816q-39.6 0-67.8 28.2Q384-759.6 384-720q0 39.6 28.2 67.8Q440.4-624 480-624Zm0-96Zm0 362Z"/></svg>
                     </button>
                 </div>    
             </div>

@@ -39,28 +39,33 @@ function showLibrary() {
         let divBook = document.createElement('div'); // creates a new div - book
         divBook.className = "book"
         library.appendChild(divBook); // adds the div to the library section
+
         // creates text content from the input
         let nameBook = document.createElement('p');
         nameBook.className = "name-book"
         nameBook.textContent = element.title;
         let authorBook = document.createElement('p');
-        authorBook.className = "name-book"
+        authorBook.className = "author-name"
         authorBook.textContent = element.author;
         let pagesBook = document.createElement('p');
-        pagesBook.className = "name-book"
+        pagesBook.className = "pages"
         pagesBook.textContent = element.pages;
         let readBook = document.createElement('p');
-        readBook.className = "name-book"
-        readBook.textContent = element.read;
+        readBook.className = "read"
+        if (element.read == true) {  // in case the toggle was true, the book has been read, otherwise, it isn't read
+            readBook.textContent = "I'v read it ✓";
+        } else {
+            readBook.textContent = "I'v not read it ✗";
+        }
+
         // adding to the new div
         divBook.appendChild(nameBook);
         divBook.appendChild(authorBook);
         divBook.appendChild(pagesBook);
         divBook.appendChild(readBook);
+
         // adding svgs
         addSVG(divBook)
-
-
     }
 }
 
@@ -68,25 +73,49 @@ function ClearFields() {
     document.getElementById("name-book").value = "";
     document.getElementById("author-name").value = "";
     document.getElementById("pages").value = "";
-    document.getElementById("read").value = "";
+    document.getElementById("read").checked = false;
 }
 
 function addBookToLibrary() {
-    const title = document.getElementById('name-book').value
+    const title = document.getElementById('name-book').value;
     console.log(title);
-    const author = document.getElementById('author-name').value
+    const author = document.getElementById('author-name').value;
     console.log(author);
-    const pages = document.getElementById('pages').value
+    const pages = document.getElementById('pages').value;
     console.log(pages);
-    const read = document.getElementById('read').value
+    const read = document.getElementById('read').checked;
     console.log(read);
-    const newBook = new Book(title, author, pages, read)
+    const newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook)
     ClearFields();
-    showLibrary()
+    showLibrary();
 }
 
 
 
-let buttonSelector = document.querySelector('#button-add-book');
+const buttonSelector = document.querySelector('#button-add-book');
 buttonSelector.addEventListener('click', addBookToLibrary);
+
+const librarySection = document.querySelector('#library-section');
+librarySection.addEventListener('click', (e) => {
+    let target = e.target;
+    switch (target.className) {
+        case "button-options delete":
+            // for i in range of myLibrary.lenght
+                // if i == targe.index
+                    // myLibrary[i].delete
+                    // function indexRestart()
+            // showLibrary()
+            break;
+
+        case "button-options toggle":
+            // for i in range of myLibrary.lenght
+                // if i == target.index
+                    // if myLibrary[i].read == true
+                        // myLibrary[i].read = false
+                    // else 
+                        // myLibrary[i].read = true
+            // showLibrary()
+            break;
+    }
+})
